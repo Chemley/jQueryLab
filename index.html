@@ -1,0 +1,68 @@
+<!-- The page needs to be responsive use FlexBox -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel = "stylesheet" type = "text/css" href = "styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700|Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <title>Table Finder</title>
+</head>
+<body>
+<div class = "tables">
+  <h1>Table Finder</h1>
+  <p>Pick your table now</p>
+</div>
+
+  <!-- Table Finder Circles -->
+<div class = "buttonBackground">
+<div class = "buttonRow">
+  <div>
+    <button id="button1" class = "available">1</button>
+  </div>
+  <div>
+    <button class = "available" type ="button">2</button>
+  </div>
+  <div>
+    <button class = "available" type ="button">3</button>
+  </div>
+</div>
+<div class = "buttonRow">
+  <div>
+    <button class = "available" type ="button" >4</button>
+  </div>
+  <div>
+    <button class = "available" type ="button" >5</button>
+  </div>
+  <div>
+    <button class = "available" type ="button" >6</button>
+  </div>
+</div>
+<div class = "buttonRow">
+  <div>
+    <button class = "available" type ="button" >7</button>
+  </div>
+  <div>
+    <button class = "available" type ="button" >8</button>
+  </div>
+  <div>
+    <button class = "available" type ="button" >9</button>
+  </div>
+</div>
+</div>
+  <!-- Reservation form -->
+  <div id = "newRez" class="newRez buttonBackground">
+    <i class="material-icons">X</i>
+    <h2>New Reservation</h2>
+    <p id = "tableNumber">Table Number:</p>
+    <input type = "name" placeHolder = "Name"/>
+    <input type = "number" placeholder="Telephone Number">
+    <input type = "party" placeholder="Number in Party">
+    <button id="save" class="save" type ="button">SAVE</button>
+  </div>
+
+<script src="jquery-3.2.1.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

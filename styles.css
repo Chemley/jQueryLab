@@ -1,0 +1,94 @@
+h1 {
+color: #E34E45;
+font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: aqua;
+}
+
+input {
+  display: block;
+  padding:0;
+  margin: 35px;
+  flex-wrap: wrap;
+  text-align: left;
+  border: none;
+  border-bottom: 2px solid #CCC;
+  width: 300px;
+}
+
+.tables {
+text-align: center;
+}
+
+p {
+font-family: 'Rubik', sans-serif;
+width: 200px;
+display: inline-block;
+}
+
+h2 {
+  color: #E34E45;
+  font-family: 'Rubik', sans-serif;
+}
+
+.buttonBackground {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  border-radius: 7px;
+  margin: 0 auto;
+
+}
+
+.buttonRow {
+  display: flex;
+}
+
+.available {
+  margin: 20px;
+  padding: 45px;
+  border-radius: 140px;
+  width: 140px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 45px;
+  background-color: #CCC;
+  border: none;
+  color: #ADAAAA;
+}
+
+.reserved {
+  background-color: ##ADAAAA;
+  border: none;
+  color: #CCC;
+  cursor: not-allowed;
+}
+
+#newRez {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  padding: 10px 0px;
+  background-color: white;
+  width: 60%;
+  border-radius: 7px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.save {
+  width: 300px;
+  background-color: #008000;
+  border: none;
+  color: #EEE;
+  padding: 15px;
+  box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+  font-size: 18px;
+}
+
+#exit {
+
+}
