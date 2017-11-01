@@ -1,39 +1,63 @@
+// This program is an event based program. Which means that the code only runs when an event takes place. In this code that is when a button is clicked.
+// The only way for this to work is to have a golabal var to hold the info until it needs to ve used.
+// There are three events that happen: click, submit, hover.
+// We also crated one structure to store all of our reservations that we've used thus far. We used an array. Any structure that could hold multiple things would be fine.
+
+
+// doc.ready = your code won't run until after the HTML and CSS run.
 $(document).ready(function(){
 // Whent the user clicks a table, open the newRez form
 var lastTableClicked;
-$(".table").on("click", function(){
+var tableReservations = [];
+
+// this function takes the number[.text()] from the table then erases any spaces[.trim()].
+// it also allows us to get the num from the table to use it later.
+function getNumberFromTable(table) {
+  return parsInt ( $(table).text().trim() );
+}
+
+// This f(x) opens the form as well as get the table numbe ans sets the global variable with that number.
+$(".table").on("click", function() {
   $("#newRez").css("display", "block");
-  var tableNum = $(this).text();
+  var tableNum = getNumberFromTable(this);
   $("#tableNumber").text("Table Number: " + tableNum);
-  lastTableClicked = tableNum;
+  lastTableClicked = this;
 });
 
-// getting the close funciton to work.
+// This f(x) allows the close to work.
 $("i").on("click", function(){
   $("#newRez").css("display", "none");
 });
 
-var info = [
-  { table: " ",
-    name: " ",
-    size: " "
-  }];
+// The save button below allows us to
+$("#save").on("click", function() {
+  // $(this).preventDefault();
+// Step 1: Change the class of the button.
+  // $(lastTableClicked).toggleClass("reserved");
+  $(lastTableClicked).addClass("available").removeClass("reserved");
+// Step 2: Get the information from the form.
+  var name = $(".name").val();
+  var size = $(".size").val();
+  var reservation = {
+    name: name,
+    size: size
+  };
+  var tableNum = getNumberFromTable(lastTableClicked);
+  tableReservations[table] = reservation;
+  console.log(tableReservations);
 
-$("submit").on("click", function() {
-  $(this).preventDefault();
-  // set the value attribute with the user info in the input
-  // What's missing: the information is not linked to the table, therefore the name and party size can't be stored nor pulled for later usage.
-  info[lastTableClicked].size = $(".size").val();
-  info[lastTableClicked].name = $(".name").val();
-  info[lastTableClicked].table = lastTableClicked;
-  $(".name").val(" ");
-  $(".size").val(" ");
-  $(this).toggleClass("reserved");
+// Hide form.
+  $("#newRez").css("display", "none");
 });
 
-$("button").on("hover", function(){
-  $(".reserved").text("Name: " + info[].name);
-  $(".reserved").text("Size of party: " + info[].size);
+// Step 3: Create the hover.
+$(".table").on("mouseenter", function(){
+  var tableNum = getNumberFromTable(this);
+  if ($(this).hasClass("reserved")){
+    console.log(tableNum);
+    var reservationInfo = tableReservations [tableNum];
+  }
 });
+
 
 });
