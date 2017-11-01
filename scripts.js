@@ -17,7 +17,7 @@ var info = [
   { table: " ",
     name: " ",
     size: " "
-  }]
+  }];
 
 $("submit").on("click", function() {
   $(this).preventDefault();
