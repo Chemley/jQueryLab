@@ -4,20 +4,24 @@ font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: aqua;
+  background-color: rgba(227, 215, 212, 1);
 }
 
 input {
   display: block;
-  padding:0;
   margin: 35px;
+  padding: 20px;
   flex-wrap: wrap;
   text-align: left;
   border: none;
   border-bottom: 2px solid #CCC;
-  width: 300px;
+  width: 70%;
 }
 
+.material-icons {
+  position: relative;
+  float: right;
+}
 .tables {
 text-align: center;
 }
@@ -36,47 +40,48 @@ h2 {
 .buttonBackground {
   background-color: white;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  width: 60%;
+  justify-content: space-around;
   border-radius: 7px;
   margin: 0 auto;
+  padding: 15px;
+  width: 350px;
+  height: 350px;
 
-}
-
-.buttonRow {
-  display: flex;
 }
 
 .available {
-  margin: 20px;
   padding: 45px;
-  border-radius: 140px;
-  width: 140px;
+  border-radius: 100%;
   font-family: 'Rubik', sans-serif;
-  font-size: 45px;
-  background-color: #CCC;
+  font-size: 15px;
+  width: auto;
+  height: auto;
+  background-color: #EEE;
   border: none;
-  color: #ADAAAA;
+  color: #CCC;
 }
 
 .reserved {
-  background-color: ##ADAAAA;
+  background-color: #CCC;
   border: none;
-  color: #CCC;
+  color: #EEE;
   cursor: not-allowed;
 }
 
 #newRez {
   display: none;
   position: absolute;
-  z-index: 1000;
+  z-index: 3;
   padding: 10px 0px;
   background-color: white;
-  width: 60%;
+  width: 75%;
   border-radius: 7px;
   margin: 0 auto;
+  margin-top: -56%;
   text-align: center;
+  background-color: white;
 }
 
 .save {
@@ -89,6 +94,54 @@ h2 {
   font-size: 18px;
 }
 
-#exit {
+@media only screen and (min-width: 992px) {
+  .buttonBackground {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding: 15px;
+    width: 500px;
+    height: 500px;
+
+  }
+
+  .table {
+    padding: 45px;
+    border-radius: 100%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 45px;
+    background-color: #EEE;
+    border: none;
+    color: #CCC;
+    width: 150px;
+    height: 159px;
+  }
+  #newRez {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    padding: 10px 0px;
+    background-color: white;
+    width: 57%;
+    border-radius: 7px;
+    margin-left: 25%;
+    margin-top: -50%;
+    text-align: center;
+    background-color: white;
+  }
+  input {
+    display: block;
+    margin: 35px;
+    padding: 20px;
+    flex-wrap: wrap;
+    text-align: left;
+    border: none;
+    border-bottom: 2px solid #CCC;
+    width: 75%;
+  }
 
 }

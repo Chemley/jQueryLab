@@ -5,8 +5,8 @@
 <head>
   <link rel = "stylesheet" type = "text/css" href = "styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:700|Rubik" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Table Finder</title>
 </head>
 <body>
@@ -17,50 +17,26 @@
 
   <!-- Table Finder Circles -->
 <div class = "buttonBackground">
-<div class = "buttonRow">
-  <div>
-    <button id="button1" class = "available">1</button>
-  </div>
-  <div>
+    <button class = "available" type ="button">1</button>
     <button class = "available" type ="button">2</button>
-  </div>
-  <div>
     <button class = "available" type ="button">3</button>
-  </div>
-</div>
-<div class = "buttonRow">
-  <div>
-    <button class = "available" type ="button" >4</button>
-  </div>
-  <div>
-    <button class = "available" type ="button" >5</button>
-  </div>
-  <div>
-    <button class = "available" type ="button" >6</button>
-  </div>
-</div>
-<div class = "buttonRow">
-  <div>
-    <button class = "available" type ="button" >7</button>
-  </div>
-  <div>
-    <button class = "available" type ="button" >8</button>
-  </div>
-  <div>
-    <button class = "available" type ="button" >9</button>
-  </div>
-</div>
+    <button class = "available" type ="button">4</button>
+    <button class = "available" type ="button">5</button>
+    <button class = "available" type ="button">6</button>
+    <button class = "available" type ="button">7</button>
+    <button class = "available" type ="button">8</button>
+    <button class = "available" type ="button">9</button>
 </div>
   <!-- Reservation form -->
-  <div id = "newRez" class="newRez buttonBackground">
+  <form id = "newRez" class="newRez">
     <i class="material-icons">X</i>
     <h2>New Reservation</h2>
     <p id = "tableNumber">Table Number:</p>
-    <input type = "name" placeHolder = "Name"/>
-    <input type = "number" placeholder="Telephone Number">
-    <input type = "party" placeholder="Number in Party">
-    <button id="save" class="save" type ="button">SAVE</button>
-  </div>
+    <input class="name" type = "text" placeHolder = "Name"/>
+    <input class="phone" type = "text" placeholder="Telephone Number"/>
+    <input class="size" type = "number" placeholder="Size of Party"/>
+    <input type = "submit" value="RESERVE" class="save"/>
+  </form>
 
 <script src="jquery-3.2.1.js"></script>
 <script src="scripts.js"></script>
