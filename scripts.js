@@ -23,15 +23,17 @@ $("submit").on("click", function() {
   $(this).preventDefault();
   // set the value attribute with the user info in the input
   // What's missing: the information is not linked to the table, therefore the name and party size can't be stored nor pulled for later usage.
-  info.name = $("input:text").attr("data-name");
-  info.size = $("input:number").attr("data-num");
-  info.size = Number(info.size);
+  info[lastTableClicked].size = $(".size").val();
+  info[lastTableClicked].name = $(".name").val();
+  info[lastTableClicked].table = lastTableClicked;
+  $(".name").val(" ");
+  $(".size").val(" ");
   $(this).toggleClass("reserved");
 });
 
 $("button").on("hover", function(){
-  $(".reserved").text("Name: " + info.name);
-  $(".reserved").text("Size of party: " + info.size);
+  $(".reserved").text("Name: " + info[].name);
+  $(".reserved").text("Size of party: " + info[].size);
 });
 
 });
